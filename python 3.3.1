@@ -1,0 +1,60 @@
+def addition(a, b):
+    return a + b
+
+def subtraction(a, b):
+    return a - b
+
+def multiplication(a, b):
+    return a * b
+
+def division(a, b):
+    if b == 0:
+        return "Error: Division by zero!"
+    else:
+        return a / b
+
+def modulus(a, b):
+    if b == 0:
+        return "Error: Modulus by zero!"
+    else:
+        return a % b
+
+def average(a, b):
+    return (a + b) / 2
+
+def power(a, b):
+    return a ** b
+
+def main():
+   
+    a, b = map(int, input("Enter two numbers: ").split())
+
+   
+    choice = int(input("Enter your option: "))
+
+  
+    if choice == 1:
+        result = addition(a, b)
+    elif choice == 2:
+        result = subtraction(a, b)
+    elif choice == 3:
+        result = multiplication(a, b)
+    elif choice == 4:
+        result = division(a, b)
+    elif choice == 5:
+        result = modulus(a, b)
+    elif choice == 6:
+        result = average(a, b)
+    elif choice == 7:
+        result = power(a, b)
+    else:
+        result = "Invalid choice!"
+
+   
+    if isinstance(result, float):
+        print("{:.2f}".format(result))
+    else:
+        print(result)
+
+if __name__ == "__main__":
+    main()
