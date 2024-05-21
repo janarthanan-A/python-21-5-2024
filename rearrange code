@@ -1,8 +1,11 @@
 Rearrange Code
 Rearrange the code so that the code prints the numbers from 1 to 10.
 
-
-while i <= 10:
-    i = i + 1
-    print(i)
 i = 1
+while i <= 10:
+    print(i)
+    i = i + 1
+
+
+
+
