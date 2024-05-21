@@ -1,0 +1,32 @@
+def calculate_grade(mark1, mark2, mark3):
+    
+    average_mark = (mark1 + mark2 + mark3) / 3
+
+   
+    if average_mark >= 90:
+        return 'A'
+    elif average_mark >= 80:
+        return 'B'
+    elif average_mark >= 70:
+        return 'C'
+    elif average_mark >= 60:
+        return 'D'
+    elif average_mark >= 50:
+        return 'E'
+    else:
+        return 'F'
+
+def main():
+   
+    mark1 = int(input())
+    mark2 = int(input())
+    mark3 = int(input())
+
+  
+    grade = calculate_grade(mark1, mark2, mark3)
+
+ 
+    print("The grade is", grade)
+
+if __name__ == "__main__":
+    main()
