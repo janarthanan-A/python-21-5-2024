@@ -1,0 +1,20 @@
+def is_valid_triangle(a, b, c):
+   
+    if a + b > c and a + c > b and b + c > a:
+        return "Valid triangle"
+    else:
+        return "Invalid triangle"
+
+def main():
+  
+    sides = input("Enter the length of three sides of triangle: ").split()
+    a, b, c = map(int, sides)
+
+    
+    result = is_valid_triangle(a, b, c)
+
+ 
+    print(result)
+
+if __name__ == "__main__":
+    main()
