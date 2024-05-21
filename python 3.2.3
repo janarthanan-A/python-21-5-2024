@@ -1,0 +1,32 @@
+def find_coincide_time(hours):
+    if hours < 0 or hours >= 12:
+        return "Invalid input"
+
+    # Calculate the angle swept by each hand in one hour
+    angle_per_hour_hour_hand = 30  # 360 degrees / 12 hours
+    angle_per_hour_minute_hand = 360 / 60  # 360 degrees / 60 minutes
+
+ 
+    hour_hand_angle = hours * angle_per_hour_hour_hand
+    minute_hand_angle = hours * angle_per_hour_minute_hand * 5  # Each hour corresponds to 5 minutes on the minute hand
+
+    
+    angle_difference = abs(hour_hand_angle - minute_hand_angle)
+
+   
+    coincide_time = angle_difference / (11 / 60)  # 360 degrees / (360 / 11) minutes
+
+    return coincide_time
+
+def main():
+    
+    hours = int(input("Enter time in hours: "))
+
+  
+    result = find_coincide_time(hours)
+
+    
+    print("({} / 11)".format(result))
+
+if __name__ == "__main__":
+    main()
