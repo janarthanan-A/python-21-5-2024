@@ -1,0 +1,18 @@
+
+
+
+def extract_last_two_digits(n):
+    return n % 100
+
+def main():
+   
+    n = int(input("Enter an integer greater than 99: "))
+
+
+    last_two_digits = extract_last_two_digits(n)
+
+  
+    print("The last two digits of {} are: {:02}".format(n, last_two_digits))
+
+if __name__ == "__main__":
+    main()
