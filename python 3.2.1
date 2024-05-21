@@ -1,0 +1,24 @@
+def can_form_rectangle(a, b, c, d):
+    # Sorting the sides
+    sides = [a, b, c, d]
+    sides.sort()
+
+    # Checking if opposite sides are equal
+    if sides[0] == sides[1] and sides[2] == sides[3]:
+        return "Yes"
+    else:
+        return "No"
+
+def main():
+    # Input the four side lengths
+    sides = input("Enter rectangle four sides of length: ").split()
+    a, b, c, d = map(int, sides)
+
+    # Check if a rectangle can be formed
+    result = can_form_rectangle(a, b, c, d)
+
+    # Print the result
+    print(result)
+
+if __name__ == "__main__":
+    main()
